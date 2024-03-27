@@ -103,8 +103,8 @@ The base layer is maintained as separate tables for tap alphas, tap thumbs, and 
 
 #+NAME: hold
 | BOOT     | DF(U_TAP) | DF(U_EXTRA) | DF(U_BASE) |         |       | DF(U_BASE) | DF(U_EXTRA) | DF(U_TAP) | BOOT     |
-| LGUI     | LALT      | LCTL        | LSFT       |         |       | LSFT       | LCTL        | LALT      | LGUI     |
-| U_BUTTON | ALGR      | LOCK_OPP    | LOCK_CUR   |         |       | LOCK_CUR   | LOCK_OPP    | ALGR      | U_BUTTON |
+| LCTL     | LALT      | LGUI        | LSFT       |         |       | RSFT       | RGUI        | RALT      | RCTL     |
+| U_BUTTON | LGUI      | LOCK_OPP    | LOCK_CUR   |         |       | LOCK_CUR   | LOCK_OPP    | RGUI      | U_BUTTON |
 | U_NP     | U_NP      | U_MEDIA     | U_NAV      | U_MOUSE | U_SYM | U_NUM      | U_FUN       | U_NP      | U_NP     |
 
 
@@ -130,7 +130,7 @@ The base layer is maintained as separate tables for tap alphas, tap thumbs, and 
 
 #+NAME: button
 | U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST | U_CPY | U_CUT | U_UND |
-| LGUI  | LALT  | LCTL  | LSFT  |       |       | LSFT  | LCTL  | LALT  | LGUI  |
+| LCTL  | LALT  | LGUI  | LSFT  |       |       | RSFT  | RGUI  | RALT  | RCTL  |
 | U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST | U_CPY | U_CUT | U_UND |
 
 #+NAME: button-thumbs
@@ -356,8 +356,8 @@ Not available with ~MIRYOKU_LAYERS=FLIP~.
 
 #+NAME: hold-flip
 | BOOT     | DF(U_TAP) | DF(U_EXTRA) | DF(U_BASE) |       |         | DF(U_BASE) | DF(U_EXTRA) | DF(U_TAP) | BOOT     |
-| LGUI     | LALT      | LCTL        | LSFT       |       |         | LSFT       | LCTL        | LALT      | LGUI     |
-| U_BUTTON | ALGR      | LOCK_OPP    | LOCK_CUR   |       |         | LOCK_CUR   | LOCK_OPP    | ALGR      | U_BUTTON |
+| LCTL     | LALT      | LGUI        | LSFT       |       |         | RSFT       | RGUI        | RALT      | RCTL     |
+| U_BUTTON | LGUI      | LOCK_OPP    | LOCK_CUR   |       |         | LOCK_CUR   | LOCK_OPP    | RGUI      | U_BUTTON |
 | U_NP     | U_NP      | U_FUN       | U_NUM      | U_SYM | U_MOUSE | U_NAV      | U_MEDIA     | U_NP      | U_NP     |
 
 
@@ -585,7 +585,7 @@ Modifiers usable in hold table.  Need to have the same name for ~KC_~ and ~_T~
 versions.
 
 #+NAME: mods
-| LSFT | LCTL | LALT | LGUI | ALGR |
+| LSFT | LCTL | LALT | LGUI | RSFT | RCTL | RALT | RGUI  | ALGR |
 
 
 **** keycode-translation
@@ -720,8 +720,10 @@ Source keycode to implementation equivalent (source, QMK, ZMK, KMonad, SVG, KMK)
 | PSCR        | PSCR             | PSCRN         | sysrq         | PrtScn SysRq  | PSCR          |
 | QUES        | QUES             | QMARK         | ?             | ?             | QUES          |
 | QUOT        | QUOT             | SQT           | U_QUOT        | '             | QUOT          |
+| RALT        | RALT             | RALT          | alt           | Alt           | RALT          |
 | RBRC        | RBRC             | RBKT          | ]             | ]             | RBRC          |
 | RCBR        | RCBR             | RBRC          | }             | }             | RCBR          |
+| RCTL        | RCTL             | RCTRL         | ctl           | Ctrl          | RCTL          |
 | RESET       | QK_RBT           | &reset        |               | Reset         | RESET         |
 | RGB_HUD     | RGB_HUD          |               |               | RGB Hue  -    | U_RGB_HUD     |
 | RGB_HUI     | RGB_HUI          | U_RGB_HUI     |               | RGB Hue  +    | U_RGB_HUI     |
@@ -734,7 +736,9 @@ Source keycode to implementation equivalent (source, QMK, ZMK, KMonad, SVG, KMK)
 | RGB_VAD     | RGB_VAD          |               |               | RGB Value  -  | U_RGB_VAD     |
 | RGB_VAI     | RGB_VAI          | U_RGB_BRI     |               | RGB Value  +  | U_RGB_VAI     |
 | RGHT        | RGHT             | RIGHT         | right         | Right         | RGHT          |
+| RGUI        | RGUI             | RGUI          | met           | Meta          | RGUI          |
 | RPRN        | RPRN             | RPAR          | U_RPRN        | S_RPRN        | RPRN          |
+| RSFT        | RSFT             | RSHFT         | sft           | Shift         | RSFT          |
 | SCLN        | SCLN             | SEMI          | ;             | ;             | SCLN          |
 | SLCK        | SCRL             | SLCK          | slck          | Scroll Lock   | SLCK          |
 | SLSH        | SLSH             | SLASH         | /             | /             | SLSH          |
