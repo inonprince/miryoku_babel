@@ -415,7 +415,7 @@ Not available with ~MIRYOKU_LAYERS=FLIP~.
 ******** Media
 
 #+NAME: media-l
-| TB_DPI   | RGB_HUI  | RGB_SAI  | RGB_VAI  | RGB_TOG |
+| TB_BOOT  | RGB_HUI  | RGB_SAI  | RGB_VAI  | RGB_TOG |
 | MPRV     | VOLD     | VOLU     | MNXT     | EP_TOG  |
 | BT_SEL_0 | BT_SEL_1 | BT_SEL_2 | BT_SEL_3 | OUT_TOG |
 | U_NP     | U_NP     | MUTE     | MPLY     | MSTP    |
@@ -755,6 +755,7 @@ Source keycode to implementation equivalent (source, QMK, ZMK, KMonad, SVG, KMK)
 | WH_R        | WH_R             | U_WH_R        |               | Scroll Right  |               |
 | WH_U        | WH_U             | U_WH_U        |               | Scroll Up     | MW_UP         |
 | TB_DPI      |                  | &tb_cyc_dpi   |               | TB Cycle DPI  |               |
+| TB_BOOT     |                  | &tb_bootloader|               | TB Bootload   |               |
 
 
 **** table-layer-init
