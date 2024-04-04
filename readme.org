@@ -415,10 +415,10 @@ Not available with ~MIRYOKU_LAYERS=FLIP~.
 ******** Media
 
 #+NAME: media-l
-| TB_BOOT  | TB_DPI   | RGB_SAI  | RGB_VAI  | RGB_TOG |
-| MPRV     | VOLD     | VOLU     | MNXT     | EP_TOG  |
-| BT_SEL_0 | BT_SEL_1 | BT_SEL_2 | BT_SEL_3 | OUT_TOG |
-| U_NP     | U_NP     | MUTE     | MPLY     | MSTP    |
+| TB_BOOT  | TB_DPI   | TB_TGSCR | TB_MOSCR | TB_HTSCR |
+| MPRV     | VOLD     | VOLU     | MNXT     | EP_TOG   |
+| BT_SEL_0 | BT_SEL_1 | BT_SEL_2 | BT_SEL_3 | OUT_TOG  |
+| U_NP     | U_NP     | MUTE     | MPLY     | MSTP     |
 
 
 ******* Inverted-T
@@ -756,6 +756,9 @@ Source keycode to implementation equivalent (source, QMK, ZMK, KMonad, SVG, KMK)
 | WH_U        | WH_U             | U_WH_U        |               | Scroll Up     | MW_UP         |
 | TB_DPI      |                  | &tb_cyc_dpi   |               | TB Cycle DPI  |               |
 | TB_BOOT     |                  | &tb_bootloader|               | TB Bootload   |               |
+| TB_TGSCR    |                  | &tb_tg_scroll |               | TB Scroll     |               |
+| TB_MOSCR    |                  | &tb_mo_scroll |               | TB MO Scroll  |               |
+| TB_HTSCR    |                  | &tbs_mt 0 0   |               | TB HTP Scroll |               |
 
 
 **** table-layer-init
