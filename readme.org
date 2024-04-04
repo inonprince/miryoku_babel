@@ -136,6 +136,15 @@ The base layer is maintained as separate tables for tap alphas, tap thumbs, and 
 #+NAME: button-thumbs
 | U_NP  | U_NP  | BTN3  | BTN1  | BTN2  | BTN2  | BTN1  | BTN3  | U_NP  | U_NP  |
 
+*** Trackball
+
+#+NAME: trkbl
+| U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST    | U_CPY | U_CUT | U_UND |
+| LCTL  | LALT  | LGUI  | LSFT  |       |       | TB_HTSCR | RGUI  | RALT  | RCTL  |
+| U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST    | U_CPY | U_CUT | U_UND |
+
+#+NAME: trkbl-thumbs
+| U_NP  | U_NP  | BTN3  | BTN1  | BTN2  | BTN2  | BTN1  | BTN3  | U_NP  | U_NP  |
 
 *** Media
 
@@ -499,6 +508,7 @@ Not available with ~MIRYOKU_LAYERS=FLIP~.
 | U_NUM    | Num    |
 | U_SYM    | Sym    |
 | U_FUN    | Fun    |
+| U_TRKBL  | TrkBl  |
 
 
 **** symbol-names
@@ -1213,6 +1223,13 @@ Body of miryoku_layer_selection.h.
   #define MIRYOKU_LAYERMAPPING_BUTTON MIRYOKU_MAPPING
 #endif
 
+#if !defined(MIRYOKU_LAYER_TRKBL)
+  #define MIRYOKU_LAYER_TRKBL MIRYOKU_ALTERNATIVES_TRKBL
+#endif
+#if !defined(MIRYOKU_LAYERMAPPING_TRKBL)
+  #define MIRYOKU_LAYERMAPPING_TRKBL MIRYOKU_MAPPING
+#endif
+
 #if !defined(MIRYOKU_LAYER_NAV)
   #if defined (MIRYOKU_LAYERS_FLIP)
     #if defined (MIRYOKU_NAV_INVERTEDT)
@@ -1898,6 +1915,9 @@ Keycodes that match any of these prefixes will not have ~KC.~ automatically prep
 
 #define MIRYOKU_ALTERNATIVES_BUTTON \
 <<table-layer-full(current_layer_name="U_BUTTON", alphas_table=button, thumbs_table=button-thumbs)>>
+
+#define MIRYOKU_ALTERNATIVES_TRKBL \
+<<table-layer-full(current_layer_name="U_TRKBL", alphas_table=trkbl, thumbs_table=trkbl-thumbs)>>
 
 #+END_SRC
 
