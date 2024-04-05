@@ -136,15 +136,6 @@ The base layer is maintained as separate tables for tap alphas, tap thumbs, and 
 #+NAME: button-thumbs
 | U_NP  | U_NP  | BTN3  | BTN1  | BTN2  | BTN2  | BTN1  | BTN3  | U_NP  | U_NP  |
 
-*** Trackball
-
-#+NAME: trkbl
-| U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST    | U_CPY | U_CUT | U_UND |
-| LCTL  | LALT  | LGUI  | LSFT  |       |       | TB_HTSCR | RGUI  | RALT  | RCTL  |
-| U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST    | U_CPY | U_CUT | U_UND |
-
-#+NAME: trkbl-thumbs
-| U_NP  | U_NP  | BTN3  | BTN1  | BTN2  | BTN2  | BTN1  | BTN3  | U_NP  | U_NP  |
 
 *** Media
 
@@ -180,6 +171,17 @@ The base layer is maintained as separate tables for tap alphas, tap thumbs, and 
 | F11  | F4   | F5   | F6   | SLCK |
 | F10  | F1   | F2   | F3   | PAUS |
 | U_NP | U_NP | APP  | SPC  | TAB  |
+
+
+*** Trackball
+
+#+NAME: trkbl
+| U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST    | U_CPY | U_CUT | U_UND |
+| LCTL  | LALT  | LGUI  | LSFT  |       |       | TB_HTSCR | RGUI  | RALT  | RCTL  |
+| U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST    | U_CPY | U_CUT | U_UND |
+
+#+NAME: trkbl-thumbs
+| U_NP  | U_NP  | BTN3  | BTN1  | BTN2  | BTN2  | BTN1  | BTN3  | U_NP  | U_NP  |
 
 
 *** Alternative Layouts
