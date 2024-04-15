@@ -130,7 +130,7 @@ The base layer is maintained as separate tables for tap alphas, tap thumbs, and 
 
 #+NAME: button
 | U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST | U_CPY | U_CUT | U_UND |
-| LCTL  | LALT  | LGUI  | LSFT  |       |       | RSFT  | RGUI  | RALT  | RCTL  |
+| LSFT  | LALT  | LGUI  | LCTL  |       |       | RCTL  | RGUI  | RALT  | RSFT  |
 | U_UND | U_CUT | U_CPY | U_PST | U_RDO | U_RDO | U_PST | U_CPY | U_CUT | U_UND |
 
 #+NAME: button-thumbs
@@ -419,7 +419,7 @@ Not available with ~MIRYOKU_LAYERS=FLIP~.
 #+NAME: mouse-l
 | WH_L  | WH_D  | WH_U  | WH_R  |       |
 | MS_L  | MS_D  | MS_U  | MS_R  |       |
-| U_UND | U_CUT | U_CPY | U_PST | U_RDO |
+| MS_L2 | MS_D2 | MS_U2 | MS_R2 |       |
 | U_NP  | U_NP  | BTN3  | BTN1  | BTN2  |
 
 
@@ -717,6 +717,10 @@ Source keycode to implementation equivalent (source, QMK, ZMK, KMonad, SVG, KMK)
 | MS_L        | MS_L             | U_MS_L        | kp4           | Mouse Left    | MS_LT         |
 | MS_R        | MS_R             | U_MS_R        | kp6           | Mouse Right   | MS_RT         |
 | MS_U        | MS_U             | U_MS_U        | kp8           | Mouse Up      | MS_UP         |
+| MS_D2       | MS_D             | U_MS_D2       | kp2           | Mouse Down    | MS_DN         |
+| MS_L2       | MS_L             | U_MS_L2       | kp4           | Mouse Left    | MS_LT         |
+| MS_R2       | MS_R             | U_MS_R2       | kp6           | Mouse Right   | MS_RT         |
+| MS_U2       | MS_U             | U_MS_U2       | kp8           | Mouse Up      | MS_UP         |
 | MSTP        | MSTP             | C_STOP        | stopcd        | Stop          | MSTP          |
 | MUTE        | MUTE             | C_MUTE        | mute          | Mute          | MUTE          |
 | NO          | NO               | &none         | XX            |               | NO            |
